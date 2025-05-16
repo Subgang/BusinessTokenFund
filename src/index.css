@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inconsolata', monospace;
+  }
+  
+  body {
+    @apply bg-background text-text;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-extrabold;
+  }
+
+  p {
+    @apply leading-relaxed font-inconsolata;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-montserrat font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-cosmic-gradient text-white hover:opacity-90 focus:ring-purple-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-accent bg-opacity-10 backdrop-blur-sm border border-accent text-text hover:bg-accent hover:bg-opacity-20 focus:ring-accent;
+  }
+  
+  .card {
+    @apply bg-accent bg-opacity-10 backdrop-blur-sm rounded-2xl overflow-hidden transition-all duration-300;
+  }
+  
+  .card-neumorphic {
+    @apply bg-accent bg-opacity-10 rounded-2xl shadow-neumorphic transition-all duration-300 hover:shadow-neumorphic-inset;
+  }
+  
+  .gradient-text {
+    @apply bg-cosmic-gradient inline-block text-transparent bg-clip-text;
+  }
+}
